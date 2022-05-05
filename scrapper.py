@@ -1,7 +1,8 @@
 import requests
 import json
 from bs4 import BeautifulSoup
-url="https://www.ceneo.pl/95908327#tab=reviews"
+id=input("Podaj id produktu którego opinie chcesz sprawdzić ")
+url=f"https://www.ceneo.pl/{id}#tab=reviews"
 all_opinions=[]
 while(url):
     response= requests.get(url)
@@ -48,6 +49,6 @@ while(url):
         url=None
 
     ##print(author,recomendation,opinion_id,stars,content,usefull,useless,published,purchased,sep="\n")
-with open("opinions/95908327.json","w",encoding="UTF-8") as file:
+with open(f"opinions/{id}.json","w",encoding="UTF-8") as file:
     json.dump(all_opinions,file,indent=4,ensure_ascii=False)
 
