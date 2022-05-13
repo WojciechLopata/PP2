@@ -130,5 +130,5 @@ dmypy.json
 
 #ide 
 .vscode 
-
+plots/*.*
 opinions/*.*

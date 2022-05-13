@@ -16,7 +16,7 @@
 |data wystawienia opinii|span.user-post__published > time:nth-child(1)\["datetime"\]|published||
 |data zakupu produktu|span.user-post__published > time:nth-child(2)\["datetime"\]|purchased||
 
-## Etapy pracy nad projektem 
+## Etapy pracy nad projektem  strukturalnym
 1. Pobranie elementów pojedyńczej opinii do niezależnych zmiennych
 2. Zapisanie wszystkich elementów pojeduńczej opinnii do jednej zmiennej \(słownink\)
 3. Pobranie wszystkich opinii z pojedyńczej strony do słowników i dodanie ich do listy
@@ -27,3 +27,13 @@
     b. utworzenie słownika opisującego strukturą opinii wraz z selektorami poszczególnych elementów
     c.zamiana instrukcji pobierającyc składowe opinii do pojedynczych zmiennych i tworzących z nich słownik na wyrażenie słownikowe \(dictionary comprehension\)
     tworzące słownik reprezentujący pojedynczą opinię na podstawie słownika selektorów
+7. analiza opinii o wybranym produkcie
+    1. wczytanie wszystkich opinii o wskazanym produkcie do obiektu dataframe
+    2. wyliczenie podstawowych statystyk na podstawie opinii
+        1. liczba wszystkich opinii o produkcie 
+        2. liczba opinii z zaletami 
+        3. liczba opinii z wadami 
+        4. średnia ilość gwiazdek
+    3. przygotowanie wykresów na podstawie zawartośći opinii 
+        1. udział poszczególnymh rekomendacji w ogólnej liczbie opinii
+        2. histogram częstości występowania poszczególnych ocen (liczby gwiazdek)
